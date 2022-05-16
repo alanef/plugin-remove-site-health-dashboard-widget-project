@@ -1,4 +1,4 @@
-var project                 = 'remove-site-health-from-dashboard'; // Project Name.
+var project                 = 'remove-site-heath-from-dashboard'; // Project Name.
 
 
 var gulp = require('gulp');

@@ -1,10 +1,8 @@
 === Remove Site Health From Dashboard ===
 Contributors: Fullworks
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=G82CWVLGCFLC4&source=url
+Donate link: https://ko-fi.com/wpalan
 Tags:  dashboard widget, site health, sitehealth
-Requires at least: 5.3
-Tested up to: 5.7
-Requires PHP: 5.6
+Tested up to: 6.0
 Stable tag: 1.0
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html

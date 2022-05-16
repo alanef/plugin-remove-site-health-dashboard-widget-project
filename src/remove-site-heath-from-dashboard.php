@@ -6,6 +6,8 @@
  * Description:       Remove the Site Heath widget from the Dashboard
  * Version:           1.0
  * Author:            Fullworks
+ * Requires at least: 5.3
+ * Requires PHP: 5.6
  * Author URI:        https://fullworks.net
  * License:           GPL-3.0+
  * License URI:       http://www.gnu.org/licenses/gpl-3.0.txt

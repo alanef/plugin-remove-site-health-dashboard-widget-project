@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * Plugin Name:       Remove Site Heath From Dashboard
+ * Plugin Name:       Remove Site Health From Dashboard
  * Plugin URI:        https://fullworks.net/products/remove-site-heath-from-dashboard/
  * Description:       Remove the Site Heath widget from the Dashboard
  * Version:           1.1

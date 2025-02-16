@@ -1,0 +1,44 @@
+{
+  "name": "alanef/remove-site-heath-from-dashboard",
+  "description": "Wordpress plugin to remove site health from dashboard",
+  "type": "wordpress-plugin",
+  "license": "GPL-2.0-or-later",
+  "config": {
+    "platform": {
+      "php": "7.4.33"
+    },
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  },
+  "scripts": {
+    "post-update-cmd": ["composer update -d remove-site-heath-from-dashboard" ],
+    "build": [
+      "rm -rf zipped",
+      "@composer install -d remove-site-heath-from-dashboard",
+      "mkdir -p zipped",
+      "zip -r zipped/remove-site-heath-from-dashboard-free.zip remove-site-heath-from-dashboard"
+    ],
+    "phpcs": "phpcs remove-site-heath-from-dashboard -s --standard=phpcs_sec.xml --ignore=*/vendor/*  --extensions=php",
+    "compat:8.3": "./vendor/bin/phpcs remove-site-heath-from-dashboard -s --standard=PHPCompatibilityWP --ignore=*/vendor/*  --extensions=php --runtime-set testVersion 8.3",
+    "compat:8.2": "./vendor/bin/phpcs remove-site-heath-from-dashboard -s --standard=PHPCompatibilityWP --ignore=*/vendor/*  --extensions=php --runtime-set testVersion 8.2",
+    "compat:8.1": "./vendor/bin/phpcs remove-site-heath-from-dashboard -s --standard=PHPCompatibilityWP --ignore=*/vendor/*  --extensions=php --runtime-set testVersion 8.1",
+    "compat:8.0": "./vendor/bin/phpcs remove-site-heath-from-dashboard -s --standard=PHPCompatibilityWP --ignore=*/vendor/*  --extensions=php --runtime-set testVersion 8.0",
+    "compat:7.4": "./vendor/bin/phpcs remove-site-heath-from-dashboard -s --standard=PHPCompatibilityWP --ignore=*/vendor/*  --extensions=php --runtime-set testVersion 7.4",
+    "compat:5.6": "./vendor/bin/phpcs remove-site-heath-from-dashboard -s --standard=PHPCompatibilityWP --ignore=*/vendor/*  --extensions=php --runtime-set testVersion 5.6",
+    "check": [
+      "@compat:8.3",
+      "@compat:8.2",
+      "@compat:8.1",
+      "@compat:8.0",
+      "@compat:7.4",
+      "@phpcs"
+    ]
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "3.*",
+    "wp-coding-standards/wpcs": "^3.0",
+    "phpcompatibility/phpcompatibility-wp": "*",
+    "phpstan/phpstan": "*"
+  }
+}

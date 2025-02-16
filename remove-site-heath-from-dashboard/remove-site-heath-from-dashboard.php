@@ -4,7 +4,7 @@
  * Plugin Name:       Remove Site Heath From Dashboard
  * Plugin URI:        https://fullworks.net/products/remove-site-heath-from-dashboard/
  * Description:       Remove the Site Heath widget from the Dashboard
- * Version:           1.0
+ * Version:           1.1
  * Author:            Fullworks
  * Requires at least: 5.3
  * Requires PHP: 5.6
@@ -29,9 +29,15 @@
  * @package remove-site-health-dashboard-widget
  */
 // If this file is called directly, abort.
-if (!defined('WPINC')) {
-    die;
+if ( ! defined( 'WPINC' ) ) {
+	die;
 }
+require_once plugin_dir_path( __FILE__ ) . 'vendor/autoload.php';
+new \Fullworks_Free_Plugin_Lib\Main( 'remove-site-heath-from-dashboard/remove-site-heath-from-dashboard.php',
+	admin_url( 'options-general.php?page=remove-site-health-settings' ),
+	'RSHFD-Free',
+	'',
+	'Remove Site Heath From Dashboard' );
 add_action(
 /**
  *   Remove Site Health from the Dashboard
@@ -43,3 +49,34 @@ add_action(
 	}
 );
 
+
+add_action(
+	'admin_menu',
+	function () {
+		if ( RSHFD_REMOVE_SITE_HEALTH_FROM_TOOLS ) {
+			remove_submenu_page( 'tools.php', 'site-health.php' );
+		}
+	}
+);
+
+// Add a menu item to the WordPress admin menu
+add_action( 'admin_menu', function () {
+	add_options_page(
+		'Remove Site Health Settings', // Page title
+		'Remove Site Health',          // Menu title
+		'manage_options',              // Capability
+		'remove-site-health-settings', // Menu slug
+		'rshfd_settings_page'          // Callback function
+	);
+} );
+
+function rshfd_settings_page() {
+	?>
+    <div class="wrap">
+        <h1>Remove Site Health Settings</h1>
+        <?php
+        do_action('ffpl_ad_display');
+        ?>
+    </div>
+	<?php
+}

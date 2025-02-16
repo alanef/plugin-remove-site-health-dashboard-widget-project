@@ -11,10 +11,14 @@
   ],
   "minimum-stability": "stable",
   "config": {
-    "vendor-dir": "vendor"
+    "vendor-dir": "vendor",
+    "allow-plugins": {
+      "composer/installers": true
+    }
   },
   "require": {
     "php": ">=5.3.0",
     "composer/installers": "v1.0.12",
+    "alanef/free_plugin_lib": "dev-main"
   }
 }

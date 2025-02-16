@@ -2,5 +2,6 @@
 dist/
 zipped/
 node_modules/
-src/vendor/
 /package-lock.json
+/remove-site-heath-from-dashboard/vendor/
+/vendor/

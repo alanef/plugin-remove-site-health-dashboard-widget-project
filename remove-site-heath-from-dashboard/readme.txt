@@ -2,8 +2,8 @@
 Contributors: Fullworks
 Donate link: https://ko-fi.com/wpalan
 Tags:  dashboard widget, site health, sitehealth
-Tested up to: 6.0
-Stable tag: 1.0
+Tested up to: 6.7
+Stable tag: 1.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -16,20 +16,13 @@ This is a good thing if it is your own site but no so good if you are getting ca
 
 So this plugin removes it.  Simple and as lightweight as any code snippet can be.
 
-This is the code, if you don't want a plugin.
+Additionally if you want to hide the Site Health from the tools menu, you can set
 
-But if you manage multiple sites you probably do want a plugin so you can push it out in bulk via your management tool
+RSHFD_REMOVE_SITE_HEALTH_FROM_TOOLS  in wp-config.php to true
 
-`add_action(
- /**
-  *   Remove Site Health from the Dashboard
-  */
- 	'wp_dashboard_setup',
- 	function () {
- 		global $wp_meta_boxes;
- 		unset( $wp_meta_boxes['dashboard']['normal']['core']['dashboard_site_health'] );
- 	}
- );`
+```
+define('RSHFD_REMOVE_SITE_HEALTH_FROM_TOOLS', true);
+```
 
 == Installation ==
 
@@ -39,16 +32,18 @@ Install like any plugin
 
 = Are there any options? =
 
-No! It is light weight.
+No! It is light weight.  But you can set a constant in wp-config.php to remove the Site Health from the Tools menu.
+```
+define('RSHFD_REMOVE_SITE_HEALTH_FROM_TOOLS', true);
+```
 
-= Can I buy you a drink? =
-
-Sure, use the donate link
 
 == Changelog ==
+= 1.1 =
+* Add opt in
 
 = 1.0 =
-* The first and hopefully only release
+* The first release
 
 
 

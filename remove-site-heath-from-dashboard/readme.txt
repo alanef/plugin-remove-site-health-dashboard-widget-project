@@ -3,7 +3,7 @@ Contributors: Fullworks
 Donate link: https://ko-fi.com/wpalan
 Tags:  dashboard widget, site health, sitehealth
 Tested up to: 6.7
-Stable tag: 1.1
+Stable tag: 1.1.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -39,6 +39,9 @@ define('RSHFD_REMOVE_SITE_HEALTH_FROM_TOOLS', true);
 
 
 == Changelog ==
+= 1.1.1 =
+* Fix PHP compatability issue
+
 = 1.1 =
 * Add opt in
 

@@ -4,7 +4,7 @@
  * Plugin Name:       Remove Site Health From Dashboard
  * Plugin URI:        https://fullworks.net/products/remove-site-heath-from-dashboard/
  * Description:       Remove the Site Heath widget from the Dashboard
- * Version:           1.1
+ * Version:           1.1.1
  * Author:            Fullworks
  * Requires at least: 5.3
  * Requires PHP: 5.6
@@ -53,7 +53,7 @@ add_action(
 add_action(
 	'admin_menu',
 	function () {
-		if ( RSHFD_REMOVE_SITE_HEALTH_FROM_TOOLS ) {
+		if ( defined( 'RSHFD_REMOVE_SITE_HEALTH_FROM_TOOLS' ) && RSHFD_REMOVE_SITE_HEALTH_FROM_TOOLS ) {
 			remove_submenu_page( 'tools.php', 'site-health.php' );
 		}
 	}
@@ -74,9 +74,9 @@ function rshfd_settings_page() {
 	?>
     <div class="wrap">
         <h1>Remove Site Health Settings</h1>
-        <?php
-        do_action('ffpl_ad_display');
-        ?>
+		<?php
+		do_action( 'ffpl_ad_display' );
+		?>
     </div>
 	<?php
 }

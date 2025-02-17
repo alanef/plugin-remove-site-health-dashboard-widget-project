@@ -20,9 +20,9 @@ Additionally if you want to hide the Site Health from the tools menu, you can se
 
 RSHFD_REMOVE_SITE_HEALTH_FROM_TOOLS  in wp-config.php to true
 
-```
-define('RSHFD_REMOVE_SITE_HEALTH_FROM_TOOLS', true);
-```
+ `define('RSHFD_REMOVE_SITE_HEALTH_FROM_TOOLS', true);`
+
+
 
 == Installation ==
 
@@ -33,9 +33,9 @@ Install like any plugin
 = Are there any options? =
 
 No! It is light weight.  But you can set a constant in wp-config.php to remove the Site Health from the Tools menu.
-```
-define('RSHFD_REMOVE_SITE_HEALTH_FROM_TOOLS', true);
-```
+
+`define('RSHFD_REMOVE_SITE_HEALTH_FROM_TOOLS', true);`
+
 
 
 == Changelog ==

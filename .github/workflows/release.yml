@@ -13,12 +13,19 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Create plugin artifact
-        run: composer run-script build
+        run: composer install -d remove-site-heath-from-dashboard --no-dev
 
-      - name: Rename plugin artifact
-        run:  mv zipped/remove-site-heath-from-dashboard-free.zip zipped/remove-site-heath-from-dashboard.zip
-
+      - name: WordPress Plugin Deploy
+        id: deploy
+        uses: 10up/action-wordpress-plugin-deploy@stable
+        dry-run: true
+        with:
+            generate-zip: true
+        env:
+            BUILD_DIR: ./remove-site-heath-from-dashboard
+            SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+            SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
-          files: zipped/remove-site-heath-from-dashboard.zip
+          files: ${{ steps.deploy.outputs.zip-path }}

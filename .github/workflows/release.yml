@@ -1,0 +1,24 @@
+name: Create Release ZIP
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Create plugin artifact
+        run: composer run-script build
+
+      - name: Rename plugin artifact
+        run:  mv zipped/remove-site-health-from-dashboard-free.zip zipped/remove-site-health-from-dashboard.zip
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: zipped/remove-site-health-from-dashboard.zip

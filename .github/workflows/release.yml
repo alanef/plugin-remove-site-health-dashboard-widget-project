@@ -18,9 +18,9 @@ jobs:
       - name: WordPress Plugin Deploy
         id: deploy
         uses: 10up/action-wordpress-plugin-deploy@stable
-        dry-run: true
         with:
             generate-zip: true
+            dry-run: true
         env:
             SLUG: remove-site-heath-from-dashboard
             BUILD_DIR: ./remove-site-heath-from-dashboard

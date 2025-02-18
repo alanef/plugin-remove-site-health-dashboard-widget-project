@@ -22,6 +22,7 @@ jobs:
         with:
             generate-zip: true
         env:
+            SLUG: remove-site-heath-from-dashboard
             BUILD_DIR: ./remove-site-heath-from-dashboard
             SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
             SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}

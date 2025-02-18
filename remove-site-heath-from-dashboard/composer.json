@@ -19,6 +19,6 @@
   "require": {
     "php": ">=5.3.0",
     "composer/installers": "v1.0.12",
-    "alanef/free_plugin_lib": "dev-main"
+    "alanef/free_plugin_lib": "^v1.0.0"
   }
 }

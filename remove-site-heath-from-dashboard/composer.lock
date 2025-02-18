@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0e90421872506cdfc78c8d4afdeb4eb4",
+    "content-hash": "375d48339e265164f786104b7b754bc9",
     "packages": [
         {
             "name": "alanef/free_plugin_lib",
-            "version": "dev-main",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/alanef/free_plugin_lib.git",
-                "reference": "43f4f538d247dd696a47ed08e4a5b4dde15c7daa"
+                "reference": "ed52c33c73999a1fe1ee5a1b00581b9462111ac8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/alanef/free_plugin_lib/zipball/43f4f538d247dd696a47ed08e4a5b4dde15c7daa",
-                "reference": "43f4f538d247dd696a47ed08e4a5b4dde15c7daa",
+                "url": "https://api.github.com/repos/alanef/free_plugin_lib/zipball/ed52c33c73999a1fe1ee5a1b00581b9462111ac8",
+                "reference": "ed52c33c73999a1fe1ee5a1b00581b9462111ac8",
                 "shasum": ""
             },
             "require": {
@@ -29,7 +29,6 @@
                 "wp-phpunit/wp-phpunit": "^6.7",
                 "yoast/wp-test-utils": "^1.2"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -49,9 +48,9 @@
             "description": "Library to add to free plugins, in compliance with wp.org",
             "support": {
                 "issues": "https://github.com/alanef/free_plugin_lib/issues",
-                "source": "https://github.com/alanef/free_plugin_lib/tree/main"
+                "source": "https://github.com/alanef/free_plugin_lib/tree/v1.0.1"
             },
-            "time": "2025-02-13T20:40:46+00:00"
+            "time": "2025-02-18T15:16:14+00:00"
         },
         {
             "name": "composer/installers",
@@ -145,9 +144,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "alanef/free_plugin_lib": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

@@ -3,7 +3,7 @@ name: Create Release ZIP
 on:
   push:
     tags:
-      - "v*.*.*"
+      - "*"
 
 jobs:
   build:
@@ -16,9 +16,9 @@ jobs:
         run: composer run-script build
 
       - name: Rename plugin artifact
-        run:  mv zipped/remove-site-health-from-dashboard-free.zip zipped/remove-site-health-from-dashboard.zip
+        run:  mv zipped/remove-site-heath-from-dashboard-free.zip zipped/remove-site-heath-from-dashboard.zip
 
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
-          files: zipped/remove-site-health-from-dashboard.zip
+          files: zipped/remove-site-heath-from-dashboard.zip

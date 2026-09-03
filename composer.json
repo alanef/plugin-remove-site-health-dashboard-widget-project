@@ -35,8 +35,7 @@
     "build": [
       "if [ -f remove-site-heath-from-dashboard/composer.json ]; then composer install -d remove-site-heath-from-dashboard --no-dev; fi",
       "mkdir -p zipped",
-      "wp dist-archive remove-site-heath-from-dashboard zipped/remove-site-heath-from-dashboard-free.zip --force",
-      "zip -qd zipped/remove-site-heath-from-dashboard-free.zip remove-site-heath-from-dashboard/.distignore >/dev/null 2>&1 || true"
+      "wp dist-archive remove-site-heath-from-dashboard zipped/remove-site-heath-from-dashboard-free.zip --force"
     ],
     "phpcs": "phpcs remove-site-heath-from-dashboard -s --standard=phpcs_sec.xml --ignore=*/vendor/* --extensions=php",
     "compat:8.4": "phpcs remove-site-heath-from-dashboard -s --standard=PHPCompatibilityWP --ignore=*/vendor/* --extensions=php --runtime-set testVersion 8.4",

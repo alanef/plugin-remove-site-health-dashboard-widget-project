@@ -9,6 +9,7 @@ tmp-build/
 node_modules/
 /vendor/
 /remove-site-heath-from-dashboard/vendor/
+/remove-site-heath-from-dashboard/composer.lock
 /remove-site-heath-from-dashboard/includes/vendor/
 .phpunit.result.cache
 *.phpunit.result.cache

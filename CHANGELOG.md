@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- FAQ entry on how to report security bugs, through the Patchstack Vulnerability Disclosure Program.
+
 ## [1.1.2]
 
 - Baseline. Earlier history is in `remove-site-heath-from-dashboard/readme.txt`.

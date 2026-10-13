@@ -38,6 +38,10 @@ No! It is light weight.  But you can set a constant in wp-config.php to remove t
 
 
 
+= How can I report security bugs? =
+
+You can report security bugs through the Patchstack Vulnerability Disclosure Program. The Patchstack team help validate, triage and handle any security vulnerabilities. [Report a security vulnerability.](https://patchstack.com/database/vdp/9e5fbd21-8b1f-493e-997d-299aadcf8796)
+
 == Changelog ==
 = 1.1.2 =
 * update opt in library

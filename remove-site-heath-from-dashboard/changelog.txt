@@ -1,0 +1,14 @@
+= Unreleased =
+* Added: FAQ entry on how to report security bugs, through the Patchstack Vulnerability Disclosure Program.
+
+= 1.1.2 =
+* update opt in library
+
+= 1.1.1 =
+* Fix PHP compatability issue
+
+= 1.1 =
+* Add opt in
+
+= 1.0 =
+* The first release

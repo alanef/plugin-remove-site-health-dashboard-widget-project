@@ -4,6 +4,7 @@ Donate link: https://ko-fi.com/wpalan
 Tags:  dashboard widget, site health, sitehealth
 Tested up to: 6.7
 Stable tag: 1.1.2
+Type: free
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 

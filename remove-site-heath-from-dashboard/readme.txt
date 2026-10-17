@@ -2,7 +2,7 @@
 Contributors: Fullworks
 Donate link: https://ko-fi.com/wpalan
 Tags:  dashboard widget, site health, sitehealth
-Tested up to: 6.7
+Tested up to: 7.1
 Stable tag: 1.1.2
 Type: free
 License: GPLv3 or later

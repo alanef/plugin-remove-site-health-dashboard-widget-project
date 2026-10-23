@@ -1,5 +1,12 @@
 = Unreleased =
 * Added: FAQ entry on how to report security bugs, through the Patchstack Vulnerability Disclosure Program.
+* Fixed: the opt-in notice could not be dismissed and kept coming back on every page load
+* Fixed: "Allow & Continue" on the opt-in screen subscribed nobody and recorded you as opted out; it now subscribes you. If you were affected, your choice is left as opted out: use the "Opt In" link on the Plugins screen to opt in
+* Fixed: on sites running other Fullworks free plugins, the opt-in notice could belong to the wrong plugin
+* Fixed: deleting the plugin now also removes its opt-in setting
+* Changed: the notice now links straight to the opt-in screen and no longer says you haven't visited settings
+* Changed: requires PHP 7.4 or later; the bundled opt-in library has needed it since 1.0.1
+* Changed: updated the bundled opt-in library to 1.3.3
 
 = 1.1.2 =
 * update opt in library

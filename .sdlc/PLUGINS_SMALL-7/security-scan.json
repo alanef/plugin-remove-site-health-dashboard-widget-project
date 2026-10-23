@@ -1,0 +1,25 @@
+{
+  "issue_id": "PLUGINS_SMALL-7",
+  "scan_date": "2026-10-23T12:00:00Z",
+  "scanned_by": "AI Assistant",
+  "files_analyzed": [
+    "free_plugin_lib src/Classes/Email.php",
+    "free_plugin_lib src/Main.php (handle_skip_optin)"
+  ],
+  "commit_range": {
+    "free_plugin_lib": "0885daf..4f34052",
+    "rshfd": "49582e4"
+  },
+  "findings": [],
+  "summary": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0,
+    "info": 0,
+    "total": 0
+  },
+  "recommendation": "PASS",
+  "blocking_issues": [],
+  "notes": "The map lookup gains a suffix fallback over developer-constant shortnames, with no user input. handle_skip_optin gains a manage_options check, which closes the Low finding from the PLUGINS_SMALL-6 scan. The webhook payload is unchanged apart from the now-correct plugin_id. Verified with requests stubbed and no external call."
+}

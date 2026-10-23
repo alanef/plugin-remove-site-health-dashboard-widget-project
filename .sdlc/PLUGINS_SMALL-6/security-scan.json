@@ -1,0 +1,39 @@
+{
+  "issue_id": "PLUGINS_SMALL-6",
+  "scan_date": "2026-10-23T12:00:00Z",
+  "scanned_by": "AI Assistant",
+  "files_analyzed": [
+    "remove-site-heath-from-dashboard/composer.json",
+    "remove-site-heath-from-dashboard/remove-site-heath-from-dashboard.php",
+    "remove-site-heath-from-dashboard/uninstall.php",
+    "free_plugin_lib v1.3.0..v1.3.3 src/ (see SUE .sdlc/PLUGINS_SMALL-6/security-scan.json)"
+  ],
+  "commit_range": {
+    "rshfd": "49582e4",
+    "free_plugin_lib": "84d3d1f..4f34052"
+  },
+  "findings": [
+    {
+      "severity": "Info",
+      "category": "A05: Security Misconfiguration",
+      "file": "remove-site-heath-from-dashboard/uninstall.php",
+      "description": "New file. Guarded by WP_UNINSTALL_PLUGIN, so a direct request dies. It only deletes the library's own site option.",
+      "recommendation": "None."
+    }
+  ],
+  "summary": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0,
+    "info": 1,
+    "total": 1
+  },
+  "recommendation": "PASS",
+  "blocking_issues": [],
+  "instrument_validation": {
+    "input_sanitisation_sweep": "validated in SUE's scan (control 958c57d^)",
+    "guard_before_state_change": "UNVALIDATED (no prior fix of the class); manual review"
+  },
+  "notes": "RSHFD adds no request handling of its own. The library's AJAX handlers keep their capability and nonce checks. The 1.3.1 redirect hijack, which hit RSHFD's empty page, is fixed in 1.3.2+ and verified here over HTTP. The PHP minimum rises to 7.4, matching the library."
+}

@@ -1,4 +1,4 @@
-= Unreleased =
+= 1.2.0 =
 * Added: FAQ entry on how to report security bugs, through the Patchstack Vulnerability Disclosure Program.
 * Fixed: the opt-in notice could not be dismissed and kept coming back on every page load
 * Fixed: "Allow & Continue" on the opt-in screen subscribed nobody and recorded you as opted out; it now subscribes you. If you were affected, your choice is left as opted out: use the "Opt In" link on the Plugins screen to opt in
